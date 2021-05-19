@@ -11,6 +11,7 @@ const { hello, fetchMovies } = new Backend() as any;
 export class AppComponent implements OnInit {
   title = 'angular-app';
   message = '';
+  movies = {};
 
   ngOnInit() {
     hello().then((msg: string) => {
@@ -18,6 +19,8 @@ export class AppComponent implements OnInit {
     });
 
     // fetchMovies from mongodb
-    fetchMovies('Star Trek').then((data: any) => console.log(data));
+    fetchMovies('Star Trek').then(
+      (data: any) => (this.movies = JSON.stringify(data, null, 2))
+    );
   }
 }

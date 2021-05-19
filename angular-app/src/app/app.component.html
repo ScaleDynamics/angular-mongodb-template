@@ -1,6 +1,6 @@
 <div class="app">
   <img src="/assets/logo.png" class="sd-logo" alt="ScaleDynamics" />
-  <div class="hello">
+  <div class="hello centered">
     <h3>{{ message }}</h3>
     <span>
       Learn about{{ " " }}
@@ -16,12 +16,12 @@
       </a>
     </span>
   </div>
-  <div class="mongodb">
-    <span>
-      You can see{{ " " }}
-      <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-        mongodb </a
-      >{{ " " }} in action in your dev console {{ ">" }}
-    </span>
+  <div class="mongodb centered">
+    <div class="centered">
+      <span><a href="https://www.mongodb.com/">MongoDB</a> in action</span>
+    </div>
+    <div class="results">
+      <pre>{{ movies }}</pre>
+    </div>
   </div>
 </div>
