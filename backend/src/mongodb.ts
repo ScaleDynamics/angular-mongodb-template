@@ -1,15 +1,15 @@
-const { MongoClient } = require('mongodb');
+import { MongoClient } from 'mongodb';
 
 // connection URI
 const URI = 'mongodb+srv://test:test@movies-scqxj.gcp.mongodb.net/';
 
 // create & connect a new MongoDB client
-const connection = MongoClient(URI, {
+const connection = new MongoClient(URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).connect();
 
-const fetchMovies = async (search) => {
+const fetchMovies = async (search: string) => {
   // await database connection
   const client = await connection.catch((error) => {
     throw new Error(`Database connection failed (${error.message})`);
@@ -24,4 +24,5 @@ const fetchMovies = async (search) => {
     .limit(50)
     .toArray();
 };
-module.exports = { fetchMovies };
+
+export { fetchMovies }

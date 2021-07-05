@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import Backend from 'backend';
-const { hello, fetchMovies } = new Backend() as any;
+const backend = new Backend();
 
 @Component({
   selector: 'app-root',
@@ -14,13 +14,13 @@ export class AppComponent implements OnInit {
   movies = {};
 
   ngOnInit() {
-    hello().then((msg: string) => {
+    backend.hello().then((msg: string) => {
       this.message = msg;
     });
 
     // fetchMovies from mongodb
-    fetchMovies('Star Trek').then(
-      (data: any) => (this.movies = JSON.stringify(data, null, 2))
-    );
+    backend
+      .fetchMovies('Star Trek')
+      .then((data: any) => (this.movies = JSON.stringify(data, null, 2)));
   }
 }
