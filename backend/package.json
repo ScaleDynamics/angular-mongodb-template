@@ -1,9 +1,16 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
+  "scripts": {
+    "ts-watch": "tsc --watch",
+    "ts-build": "tsc"
+  },
   "dependencies": {
     "mongodb": "^3.6.6"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
   }
 }
