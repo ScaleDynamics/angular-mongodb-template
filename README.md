@@ -8,7 +8,7 @@
 
 > MEAN stands for MongoDB, Express, Angular and Node.js Full Stack, which is one of the standard full stack for JavaScript developers.
 
-This template is configured for the ScaleDynamics web platform. It is on MIT license and ready to use to build your own MEAN based app/service. All is pre-configured: we provide one command to develop with live reload (frontend and backend) and one to deploy to make it live on a url.
+This template is configured for the ScaleDynamics web platform. It is ready to use to build your own MEAN based app/service. All is pre-configured: we provide one command to develop with live reload (frontend and backend) and one to deploy to make it live on a url.
 
 One particularity of our platform is that you don’t have to manage the [Express](https://expressjs.com/) layers, the platform manages them for you automatically, so you can focus only on the MongoDB/Node/Angular coding.
 
