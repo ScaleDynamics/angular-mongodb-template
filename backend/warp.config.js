@@ -1,7 +1,7 @@
 module.exports = {
   output: {
-    format: 'node-module',
-    projectPath: '../angular-app',
+    format: 'umd',
+    filePath: '../angular-app/src/.backend/backend.js',
     name: 'backend',
   },
 };

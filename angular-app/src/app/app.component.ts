@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import Backend from 'backend';
+import Backend from '../.backend/backend.js';
 const { hello, fetchMovies } = new Backend() as any;
 
 @Component({
